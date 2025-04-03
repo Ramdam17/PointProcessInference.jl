@@ -1,0 +1,4 @@
+.vscode/
+.julia/
+*.jl~
+*~
