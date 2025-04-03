@@ -12,6 +12,17 @@ This fork fixes a dependency issue related to the `Distributions.jl` package and
 
 ---
 
+## Installation
+
+To install this package in Julia:
+
+```julia
+using Pkg
+Pkg.add(url="https://github.com/ramdam17/PointProcessInference.jl")
+```
+
+---
+
 ## 🧰 How to Install Julia for Apple Silicon (M1/M2)
 
 > Avoid using `juliaup` if you're targeting a specific Julia release with full Apple Silicon support.
