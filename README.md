@@ -1,3 +1,50 @@
+# PointProcessInference.jl
+
+This fork fixes a dependency issue related to the `Distributions.jl` package and ensures compatibility with Julia `v1.11.x` on Apple Silicon (M1/M2).
+
+## ✅ What's Changed
+
+- Cleaned and regenerated `Project.toml` and `Manifest.toml` to fix precompilation errors (`Distributions`, `StatsFuns`, etc.).
+- Confirmed working environment on:
+  - **macOS (arm64)**
+  - **Julia 1.11.4**
+  - **Apple M1 Pro**
+
+---
+
+## 🧰 How to Install Julia for Apple Silicon (M1/M2)
+
+> Avoid using `juliaup` if you're targeting a specific Julia release with full Apple Silicon support.
+
+### Option 1 – Direct `.app` install
+
+1. Download the latest `.dmg` for **Apple Silicon (aarch64)** from the official site:  
+   👉 https://julialang.org/downloads/
+
+2. Drag and drop `Julia-1.11.app` into `/Applications`.
+
+---
+
+## ⚙️ Set up your `.zshrc` (Shell configuration)
+
+If you installed Julia via `.dmg`, add Julia’s binary to your shell path:
+
+```sh
+echo 'export PATH="/Applications/Julia-1.11.app/Contents/Resources/julia/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Test with:
+```sh
+julia --version
+```
+
+You should see:
+```
+julia version 1.11.4
+```
+
+
 [pkgeval-img]: https://juliaci.github.io/NanosoldierReports/pkgeval_badges/P/PointProcessInference.svg
 [pkgeval-url]: https://juliaci.github.io/NanosoldierReports/pkgeval_badges/report.html
 
